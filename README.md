@@ -1,2 +1,2 @@
 # Curso de Python
-Exercicios
+exercicios
