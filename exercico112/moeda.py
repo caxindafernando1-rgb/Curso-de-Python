@@ -1,4 +1,12 @@
 def aumento(preço=0, taxa=10, formato = False):
+      """
+      --> Calcula o aumento de um determinado preço
+      retornando  o resultado como ou sem formatação,
+      #Para o preço: o preço que se quer reajustar.
+      #Para taxa: qual é a porcentagem do aumento.
+      #Para formato: qual a saída formatada ou não?
+      #return: o valor reajustado, com ou sem formato
+      """
       resp = preço + (preço * (taxa/100))
       return resp if formato is False else moeda(resp)
 
