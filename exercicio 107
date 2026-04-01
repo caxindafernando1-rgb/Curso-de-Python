@@ -4,5 +4,5 @@ def fatorial(n):
             f *= c
       return f
 
-n1 =int(input('digite um número: '))
+n1 =int(input('Número: '))
 print(fatorial(n1))
