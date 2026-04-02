@@ -26,4 +26,24 @@ def lerArquivo(nome):
             print('Erro ao ler Arquivo!')
       else:
             cabeçalho('== PESSOAS CADASTRADAS ==')
-            print(a.read())
+            for linha in a:
+                  dodo = linha.split(';')
+                  dodo[1] = dodo[1].replace('\n', '')
+                  print(f'{dodo[0]:<30}{dodo[1]:>3} anos')
+      finally:
+            a.close()
+
+
+def cadastrar(arq, nome='Desconhhecido', idade=0):
+      try:
+            a = open(arq, 'at')
+      except:
+            print('Ouve um erro na abertura do arquivo!')
+      else:
+            try:
+                  a.write(f'{nome};{idade}\n')
+            except:
+                  print(f'Houve um ERRO na hora de escrever os dados!')
+            else:
+                  print(f'\033[1;m Novo registo de {nome} adicionado\033[m')
+                  a.close()
