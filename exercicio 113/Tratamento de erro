@@ -1,0 +1,16 @@
+def leiaInt(msg):
+      while True:
+            try:
+                  n = int(input(msg))
+            except (TypeError, ValueError):
+                  print(f'\033[1;31m ERRO! Digite um número inteiro válido \033[m')
+                  continue
+            except KeyboardInterrupt:
+                  print(f'\033[1;31m Usuário saio sem digitar um número \033[m')
+                  return 0
+            else:
+                  return n
+            
+
+num = leiaInt('Digite um númro inteiro: ')
+print(f'\033[1;32m O número digitado foi: \"{num}\". \033[m')
