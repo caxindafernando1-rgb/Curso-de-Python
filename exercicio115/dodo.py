@@ -23,7 +23,7 @@ def cabeçalho(txt):
 
 
 def menu(lista):
-      cabeçalho('== Lista de Pagamentos ==')
+      cabeçalho('== Menu Principal ==')
       c = 1
       for item in lista:
             print(f'\033[1;34m{c}\033[m --> \033[1;35m{item}\033[m')
