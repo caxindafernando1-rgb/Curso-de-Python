@@ -29,7 +29,7 @@ def lerArquivo(nome):
             for linha in a:
                   dodo = linha.split(';')
                   dodo[1] = dodo[1].replace('\n', '')
-                  print(f'{dodo[0]:<30}{dodo[1]:>3} anos')
+                  print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
       finally:
             a.close()
 

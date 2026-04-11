@@ -12,9 +12,9 @@ while True:
       if resposta == 1:
             cabeçalho(f'\033{lerArquivo(arq)}\033[m')
       elif resposta == 2:
-            cabeçalho('\033 == NOVO CADASTRO ==\033[m')
+            cabeçalho('\033 == Registrar Pagamento ==\033[m')
             nome = str(input('Nome: '))
-            idade = leiaInt('Idade: ')
+            idade = leiaInt('Pagou: ')
             cadastrar(arq, nome, idade)      
       elif resposta == 3:
             cabeçalho('\033[1;35m Saindo do programa... Até logo! \033[m')
