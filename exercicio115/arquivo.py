@@ -16,7 +16,7 @@ def creiarArquivo(nome):
       except:
             print('Houve um ERRO na criação do arquivo!')
       else:
-            print(f'Arquivo {nome} Criado com sucesso!')
+            print(f'\033[1;32m Cliente {nome} Registrado com sucesso! \033[m')
 
 
 def lerArquivo(nome):
@@ -25,11 +25,14 @@ def lerArquivo(nome):
       except:
             print('Erro ao ler Arquivo!')
       else:
+            b = 0
             cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
                   dodo = linha.split(';')
                   dodo[1] = dodo[1].replace('\n', '')
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
+                  b += dodo[1]
+            print(f'total diário {dodo[1]}')
       finally:
             a.close()
 
