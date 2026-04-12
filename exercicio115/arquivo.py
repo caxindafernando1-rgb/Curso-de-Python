@@ -25,26 +25,26 @@ def lerArquivo(nome):
       except:
             print('Erro ao ler Arquivo!')
       else:
-            b = 0
             cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
                   dodo = linha.split(';')
                   dodo[1] = dodo[1].replace('\n', '')
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
-                  b += dodo[1]
-            print(f'total diário {dodo[1]}')
+                  for c in dodo[1]:
+                        c += dodo[1]
+                  print(c)
       finally:
             a.close()
 
 
-def cadastrar(arq, nome='Desconhhecido', idade=0):
+def cadastrar(arq, nome='Desconhhecido', preço=0):
       try:
             a = open(arq, 'at')
       except:
             print('Ouve um erro na abertura do arquivo!')
       else:
             try:
-                  a.write(f'{nome};{idade}\n')
+                  a.write(f'{nome};{preço}\n')
             except:
                   print(f'Houve um ERRO na hora de escrever os dados!')
             else:
