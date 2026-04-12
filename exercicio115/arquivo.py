@@ -25,7 +25,7 @@ def lerArquivo(nome):
       except:
             print('Erro ao ler Arquivo!')
       else:
-            cabeçalho('== Regitrar Pagamentos ==')
+            cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
                   dodo = linha.split(';')
                   dodo[1] = dodo[1].replace('\n', '')
