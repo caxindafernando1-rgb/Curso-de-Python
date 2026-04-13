@@ -27,7 +27,7 @@ def lerArquivo(nome):
       else:
             cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
-                  dodo = linha.split(';').strip()
+                  dodo = linha.strip().split(';')
 
                   if len(dodo)  < 2:
                         continue
