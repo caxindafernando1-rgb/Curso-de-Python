@@ -30,11 +30,22 @@ def lerArquivo(nome):
                   dodo = linha.split(';')
                   dodo[1] = dodo[1].replace('\n', '')
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
-                  for c in dodo[1]:
-                        c += dodo[1]
-                  print(c)
       finally:
             a.close()
+
+
+def somar_idades(nome_arquivo):
+    total = 0
+    try:
+        with open(nome_arquivo, 'r') as f:
+            for linha in f:
+                dados = linha.strip().split(';')
+                idade = int(dados[1])
+                total += idade
+    except:
+        print("Erro ao ler o arquivo.")
+    else:
+        print(f'Total de idades: {total}')
 
 
 def cadastrar(arq, nome='Desconhhecido', preço=0):

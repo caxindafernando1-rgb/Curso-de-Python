@@ -8,13 +8,15 @@ if not arquivoExiste(arq):
       creiarArquivo(arq)
 
 while True:
-      resposta = menu(['Ver pessoas cadastradas', 'Cadastrar Pessoas', 'Sair do Programa'])
+      resposta = menu(['Ver Todos os Pagamentos ', 'Registrar Pagamento', 'Sair do Programa'])
       if resposta == 1:
-            cabeçalho(f'\033[1;32m {lerArquivo(arq)} \033[m')
+            cabeçalho(f' {lerArquivo(arq)} ')
       elif resposta == 2:
             cabeçalho(' == Registrar Pagamento == ')
             nome = str(input('Nome: '))
             preço = leiaInt('Pagou: ')
+            
+
             cadastrar(arq, nome, preço)      
       elif resposta == 3:
             cabeçalho('\033[1;35m Saindo do programa... Até logo! \033[m')
