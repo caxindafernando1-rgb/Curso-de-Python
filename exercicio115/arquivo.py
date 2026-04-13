@@ -35,7 +35,7 @@ def lerArquivo(nome):
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
                   idade = int(dodo[1])
                   total += idade     
-                  print(f'Total de idades: {total}')
+            print(f'\033[1;32m Total de Pagamentos: {total} Kwanzas \033[m')
       finally:
             a.close()
 
