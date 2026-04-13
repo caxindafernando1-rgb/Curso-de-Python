@@ -27,7 +27,10 @@ def lerArquivo(nome):
       else:
             cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
-                  dodo = linha.split(';')
+                  dodo = linha.split(';').strip()
+
+                  if len(dodo)  < 2:
+                        continue
                   dodo[1] = dodo[1].replace('\n', '')
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
       finally:
