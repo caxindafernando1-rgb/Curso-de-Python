@@ -25,10 +25,10 @@ def lerArquivo(nome):
       except:
             print('Erro ao ler Arquivo!')
       else:
+            total = 0
             cabeçalho('== Lita de Pagamentos ==')
             for linha in a:
                   dodo = linha.strip().split(';')
-
                   if len(dodo)  < 2:
                         continue
                   dodo[1] = dodo[1].replace('\n', '')
