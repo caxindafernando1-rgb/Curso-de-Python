@@ -1,6 +1,8 @@
 from dodo import *
 from time import sleep
 from arquivo import *
+from rich import print
+from rich import *
 
 arq = 'cursoEmVideo.txt'
 
@@ -19,8 +21,8 @@ while True:
 
             cadastrar(arq, nome, preço)      
       elif resposta == 3:
-            cabeçalho('\033[1;35m Saindo do programa... Até logo! \033[m')
+            cabeçalho('[red] Saindo do programa... Até logo! [/]')
             break
       else:
-            print(f'\033[1;31m {resposta} Não é uma resposta valida! Tenta novamente\033[m')
+            print(f'[red] {resposta} Não é uma resposta valida! Tenta novamente [/]')
       sleep(2)

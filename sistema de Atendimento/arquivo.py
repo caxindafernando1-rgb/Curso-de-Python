@@ -1,4 +1,6 @@
 from dodo import *
+from rich import print
+from rich import *
 
 def arquivoExiste(nome):
       try:
@@ -14,16 +16,16 @@ def creiarArquivo(nome):
             a = open(nome, 'wt+')
             a.close
       except:
-            print('Houve um ERRO na criação do arquivo!')
+            print('[red]Houve um ERRO na criação do arquivo![/]')
       else:
-            print(f'\033[1;32m Cliente {nome} Registrado com sucesso! \033[m')
+            print(f'[green] Cliente {nome} Registrado com sucesso! [/]')
 
 
 def lerArquivo(nome):
       try:
             a = open(nome, 'rt')
       except:
-            print('Erro ao ler Arquivo!')
+            print('[red] Erro ao ler Arquivo! [/]')
       else:
             total = 0
             cabeçalho('== Lita de Pagamentos ==')
@@ -35,7 +37,7 @@ def lerArquivo(nome):
                   print(f'{dodo[0]:<30}{dodo[1]:>3} kwanzas')
                   idade = int(dodo[1])
                   total += idade     
-            print(f'\033[1;32m Total de Pagamentos: {total} Kwanzas \033[m')
+            print(f'[blue] Total de Pagamentos: {total} Kwanzas [/]')
       finally:
             a.close()
 
@@ -47,12 +49,12 @@ def cadastrar(arq, nome='Desconhhecido', preço=0):
       try:
             a = open(arq, 'at')
       except:
-            print('Ouve um erro na abertura do arquivo!')
+            print('[red] Ouve um erro na abertura do arquivo! [/]')
       else:
             try:
                   a.write(f'{nome};{preço}\n')
             except:
-                  print(f'Houve um ERRO na hora de escrever os dados!')
+                  print(f'[red] Houve um ERRO na hora de escrever os dados! [/]')
             else:
-                  print(f'\033[1;m Novo registo de {nome} adicionado\033[m')
+                  print(f'[green] Novo registo de {nome} adicionado [/]')
                   a.close()
