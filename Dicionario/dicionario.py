@@ -1,3 +1,4 @@
+#decionario: chave, valor(podes buscar valor pela chave)
 aluno = {
     "Nome": "Fernando Caxinda", 
     "Nota": 16.5

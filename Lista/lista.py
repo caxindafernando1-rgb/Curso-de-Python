@@ -1,4 +1,5 @@
-#LISTA-conjunto de itens manipulavel(adicionar, remover, substituir)
+#LISTA-conjunto de itens manipulavel(adicionar{com .append}, remover, substituir)
+
 fruta = ["maça", "manga"]
 
 print(fruta)
